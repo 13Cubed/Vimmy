@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'>
+            <link href="Style.css" media="screen" rel="Stylesheet" type="text/css" />
+            <link href="Print.css" media="print" rel="Stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="content">
+            <table width="100%">
+                <tr>
+                    <td><b>:w</b><br>Write file, don't exit</td>
+                </tr>
+                <tr>
+                    <td><b>:wa</b><br>Write all files, don't exit</td>
+                </tr>
+                <tr>
+                    <td><b>:w </b><i>filename</i><br>Write to file <i>filename</i>, don't exit</td>
+                </tr>
+                <tr>
+                    <td><b>:wq</b><br>Write file, exit</td>
+                </tr>
+                <tr>
+                    <td><b>:xa</b><br>Write all files, exit</td>
+                </tr>
+                <tr>
+                    <td><b>:</b><i>x</i><b>,</b><i>y</i> <b>w</b> <i>filename</i><br>Write lines <i>x</i> through <i>y</i> to file <i>filename</i></td>
+                </tr>
+                <tr>
+                    <td><b>:</b><i>x</i><b>,</b><i>y</i> <b>w >></b> <i>filename</i><br>Append lines <i>x</i> through <i>y</i> to file <i>filename</i></td>
+                </tr>
+                <tr>
+                    <td><b>:r</b> <i>filename</i><br>Insert contents of file <i>filename</i></td>
+                </tr>
+                <tr>
+                    <td><b>:</b><i>x</i><b>r</b> <i>filename</i><br>Insert contents of file <i>filename</i> under line <i>x</i></td>
+                </tr>
+                <tr>
+                    <td><b>:e .</b><br>Open built-in file explorer</td>
+                </tr>
+                <tr>
+                    <td><b>:Sex</b><br>Split window and open built-in file explorer</td>
+                </tr>
+                <tr>
+                    <td><b>:browse e</b><br>Open graphical file explorer</td>
+                </tr>
+                <tr>
+                    <td><b>:cd</b> <i>directory</i><br>Change directory to <i>directory</i></td>
+                </tr>
+                <tr>
+                    <td><b>:q</b><br>Quit (if nothing changed)</td>
+                </tr>
+                <tr>
+                    <td><b>:qa</b><br>Quit all (if nothing changed)</td>
+                </tr>
+                <tr>
+                    <td><b>:q!</b><br>Quit (abort changes)</td>
+                </tr>
+                <tr>
+                    <td><b>:qa!</b><br>Quit all (abort changes)</td>
+                </tr>
+                <tr>
+                    <td><b>:sh</b><br>Drop to shell (execute commands)</td>
+                </tr>
+                <tr>
+                    <td><b>:!</b> <i>command</i><br>Execute command <i>command</i></td>
+                </tr>
+                <tr>
+                    <td><b>:%!</b> <i>command</i><br>Execute command <i>command</i>, insert output</td>
+                </tr>
+                <tr>
+                    <td><b>:%!xxd</b><br>Enter hex mode</td>
+                </tr>
+                <tr>
+                    <td><b>:%!xxd -r </b><br>Exit hex mode</td>
+                </tr>
+                <tr>
+                    <td><b>ggVGg?</b><br>Change text to ROT13</td>
+                </tr>
+                <tr>
+                    <td><b>:syntax on</b><br>Turn on syntax highlighting</td>
+                </tr>
+                <tr>
+                    <td><b>:syntax off</b><br>Turn off syntax highlighting</td>
+                </tr>
+            </table>
+        </div>
+        <center><h4>Set Commands<br>Enter :set followed by a parameter:</h4></center>
+        <div class="content">
+            <table width="100%">
+                <tr>
+                    <td><b>number</b> <i>or</i> <b>nonumber</b><br>Turn on/off line numbering</td>
+                </tr>
+                <tr>
+                    <td><b>wrap</b> <i>or</i> <b>nowrap</b><br>Turn on/off word wrap</td>
+                </tr>
+                <tr>
+                    <td><b>autoindent</b> <i>or</i> <b>noautoindent</b><br>Turn on/off autoindent</td>
+                </tr>
+                <tr>
+                    <td><b>smartindent</b> <i>or</i> <b>nosmartindent</b><br>Turn on/off smart autoindent</td>
+                </tr>
+                <tr>
+                    <td><b>shiftwidth=</b><i>x</i><br>Set indentation to <i>x</i> spaces</td>
+                </tr>
+                <tr>
+                    <td><b>ff=unix</b><br>Convert to UNIX file format</td>
+                </tr>
+                <tr>
+                    <td><b>ff=dos</b><br>Convert to DOS file format</td>
+                </tr>
+                <tr>
+                    <td><b>foldmethod=manual</b><br>Folds must be manually defined (see Code Folding section)</td>
+                </tr>
+                <tr>
+                    <td><b>foldmethod=indent</b><br>Folds are automatically created based on indentation level</td>
+                </tr>
+                <tr>
+                    <td><b>foldmethod=expr</b><br>Folds are defined by a user-defined expression</td>
+                </tr>
+                <tr>
+                    <td><b>foldmethod=syntax</b><br>Folds are defined by syntax highlighting</td>
+                </tr>
+                <tr>
+                    <td><b>nofoldenable</b><br>Turn off folding</td>
+                </tr>
+                <tr>
+                    <td><b>foldnestmax=</b><i>x</i><br>Set the deepest fold to <i>x</i> levels</td>
+                </tr>
+                <tr>
+                    <td><b>foldlevel=</b><i>x</i><br>Set the fold level to <i>x</i> (0 = all folds open)</td>
+                </tr>
+            </table>
+        </div>
+        <center><h4>Code Folding</h4></center>
+        <div class="content">
+            <table width="100%">
+                <tr>
+                    <td><b>zf</b><br>Create fold under cursor</td>
+                </tr>
+                <tr>
+                    <td><b>zd</b><br>Delete fold under cursor</td>
+                </tr>
+                <tr>
+                    <td><b>zD</b><br>Delete all folds</td>
+                </tr>
+                <tr>
+                    <td><b>zE</b><br>Delete all folds in file</td>
+                </tr>
+                <tr>
+                    <td><b>zo</b><br>Open fold under cursor</td>
+                </tr>
+                <tr>
+                    <td><b>zc</b><br>Close fold under cursor</td>
+                </tr>
+                <tr>
+                    <td><b>zO</b><br>Open all folds</td>
+                </tr>
+                <tr>
+                    <td><b>zC</b><br>Close all folds</td>
+                </tr>
+                <tr>
+                    <td><b>za</b><br>Toggle open/close fold</td>
+                </tr>
+                <tr>
+                    <td><i>x</i><b>zF</b><br>Fold <i>x</i> lines</td>
+                </tr>
+                <tr>
+                    <td><b>:fold</b><br>Fold selected lines (visual mode)</td>
+                </tr>
+                <tr>
+                    <td><b>zj</b><br>Move cursor to next fold</td>
+                </tr>
+                <tr>
+                    <td><b>zk</b><br>Move cursor to previous fold</td>
+                </tr>
+                <tr>
+                    <td><b>zm</b><br>Increase fold level by one</td>
+                </tr>
+                <tr>
+                    <td><b>zr</b><br>Decrease fold level by one</td>
+                </tr>
+                <tr>
+                    <td><b>zR</b><br>Decrease fold level to zero (all folds open)</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

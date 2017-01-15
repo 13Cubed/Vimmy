@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'>
+            <link href="Style.css" media="screen" rel="Stylesheet" type="text/css" />
+            <link href="Print.css" media="print" rel="Stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="content">
+            <table width="100%">
+                <tr>
+                    <td><b>/</b><i>text</i><br>Search for <i>text</i></td>
+                </tr>
+                <tr>
+                    <td><b>?</b><i>text</i><br>Search backwards for <i>text</i></td>
+                </tr>
+                <tr>
+                    <td><b>/</b><i>jo</i><b>[</b><i>ha</i><b>]</b><i>n</i><br>Search for <i>john</i> or <i>joan</i></td>
+                </tr>
+                <tr>
+                    <td><b>/\<</b><i>the</i><br>Search for <i>the</i> or <i>then</i> or <i>their<i></td>
+                </tr>
+                <tr>
+                    <td><b>/</b><i>the</i><b>\></b><br>Search for <i>the</i> or <i>breathe</i></td>
+                </tr>
+                <tr>
+                    <td><b>/\<</b><i>the</i><b>\></b><br>Search for <i>the</i> <u>only</u></td>
+                </tr>
+                <tr>
+                    <td><b>/</b><i>john</i><b>\|</b><i>joan</i><br>Search for <i>john</i> or <i>joan</i></td>
+                </tr>
+                <tr>
+                    <td><b>/\<\w\w\w\w\></b><br>Search for 4 letter words</td>
+                </tr>
+                <tr>
+                    <td><b>/\<\d\d\d\d\></b><br>Search for 4 digit numbers</td>
+                </tr>
+                <tr>
+                    <td><b>n</b><br>Repeat search same direction</td>
+                </tr>
+                <tr>
+                    <td><b>N</b><br>Repeat search opposite direction</td>
+                </tr>
+                <tr>
+                    <td><b>:s/</b><i>old</i><b>/</b><i>new</i><b>/</b><br>Replace all <i>old</i> with <i>new</i> (first occurrance in current line)</td>
+                </tr>
+                <tr>
+                    <td><b>:s/</b><i>old</i><b>/</b><i>new</i><b>/g</b><br>Replace all <i>old</i> with <i>new</i> (all occurrances in current line)</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/</b><i>old</i><b>/</b><i>new</i><b>/</b><br>Replace all <i>old</i> with <i>new</i> (first occurrance in all lines)</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/</b><i>old</i><b>/</b><i>new</i><b>/g</b><br>Replace all <i>old</i> with <i>new</i> (all occurrances in all lines)</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/</b><i>old</i><b>/</b><i>new</i><b>/gi</b><br>Replace all <i>old</i> with <i>new</i> (all occurrances in all lines, ignore case)</td>
+                </tr>
+                <tr>
+                    <td><b>:</b><i>x</i><b>,</b><i>y</i> <b>s/</b><i>old</i><b>/</b><i>new</i><b>/g</b><br>Replace all <i>old</i> with <i>new</i> (lines <i>x</i> through <i>y</i>)</td>
+                </tr>
+                <tr>
+                    <td><b>:</b><i>x</i><b>,$</b> <b>s/</b><i>old</i><b>/</b><i>new</i><b>/g</b><br>Replace all <i>old</i> with <i>new</i> (lines <i>x</i> through EOF)</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/^/</b><i>text</i><b>/g</b><br>Replace beginning of each line with <i>text</i></td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/$/</b><i>text</i><b>/g</b><br>Replace end of each line with <i>text</i></td>
+                </tr>
+                <tr>
+                    <td><b>:g/</b><i>text</i><b>/d</b><br>Delete all lines containing <i>text</i></td>
+                </tr>
+                <tr>
+                    <td><b>:v/</b><i>text</i><b>/d</b><br>Delete all lines <u>not</u> containing <i>text</i></td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/\r/g</b><br>Delete all DOS carriage returns</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s#<[^>]\+>##g</b><br>Delete all HTML tags</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/^\(.*\)\n\1$/\1/</b><br>Delete lines appearing twice</td>
+                </tr>
+            </table>
+        </div>
+        <center><h4>Changing Case</h4></center>
+        <div class="content">
+            <table width="100%">
+                <tr>
+                    <td><b>guu</b> <i>or</i> <b>Vu</b><br>Convert line to lowercase</td>
+                </tr>
+                <tr>
+                    <td><b>gUU</b> <i>or</i> <b>VU</b><br>Convert line to uppercase</td>
+                </tr>
+                <tr>
+                    <td><b>g~~</b><br>Invert line case</td>
+                </tr>
+                <tr>
+                    <td><b>vEU</b><br>Convert word to uppercase</td>
+                </tr>
+                <tr>
+                    <td><b>vE~</b><br>Invert word case</td>
+                </tr>
+                <tr>
+                    <td><b>ggguG</b><br>Convert all text to lowercase</td>
+                </tr>
+                <tr>
+                    <td><b>gggUG</b><br>Convert all text to uppercase</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/\&lt;./\l&amp;/g</b><br>Convert first letter of each word to lowercase</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/\&lt;./\u&amp;/g</b><br>Convert first letter of each word to uppercase</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/.*/\l&amp;</b><br>Convert first letter of each line to lowercase</td>
+                </tr>
+                <tr>
+                    <td><b>:1,$ s/.*/\u&amp;</b><br>Convert first letter of each line to uppercase</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
